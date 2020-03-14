@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    command: ./manage.py runserver 0.0.0.0:8001
+    container_name: DRF
+    volumes:
+      - .:/DRF
+    ports:
+      - "8001:8001"
